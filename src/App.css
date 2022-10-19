@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.auth-bg {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  background-color: rgb(185, 110, 81);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +35,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.dashTitle {
+  background-color: bisque;
 }
 
 @keyframes App-logo-spin {

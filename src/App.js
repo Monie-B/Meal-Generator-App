@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { getUser } from './utilities/users-service';
+import { Route, Routes } from 'react-router-dom';
+import Auth from './pages/Auth';
+import NavBar from './components/NavBar';
+import SavedMeals from './pages/SavedMeals';
+import AddMeal from './pages/AddMeal';
+import GroceryList from './pages/GroceryList';
+import Dashboard from './pages/Dashboard';
 
 function App() {
+
+  const [user, setUser] = useState(getUser());
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        user ?
+          <>
+            <NavBar user={user} />
+            <Routes>
+              <Route path="/home" element={<Dashboard />} />
+              <Route path="/add/new" element={<AddMeal />} />
+              <Route path="/grocery" element={<GroceryList />} />
+              <Route path="/save" element={<SavedMeals />} />
+            </Routes>
+          </>
+          :
+          <Auth setUser={setUser} />
+      }
     </div>
   );
 }
