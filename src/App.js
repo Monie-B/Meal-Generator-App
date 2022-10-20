@@ -9,9 +9,10 @@ import AddMeal from './pages/AddMeal';
 import GroceryList from './pages/GroceryList';
 import Dashboard from './pages/Dashboard';
 
+
 function App() {
 
-  const [user, setUser] = useState(getUser());
+  const [user, setUser] = useState('getUser()');
 
   return (
     <div className="App">
@@ -20,10 +21,11 @@ function App() {
           <>
             <NavBar user={user} />
             <Routes>
+              <Route path="/" element={<Auth />} />
               <Route path="/home" element={<Dashboard />} />
-              <Route path="/add/new" element={<AddMeal />} />
-              <Route path="/grocery" element={<GroceryList />} />
-              <Route path="/save" element={<SavedMeals />} />
+              <Route path="/addmeal" element={<AddMeal />} />
+              <Route path="/grocerylist" element={<GroceryList />} />
+              <Route path="/savedmeals" element={<SavedMeals />} />
             </Routes>
           </>
           :

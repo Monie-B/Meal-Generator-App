@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.titleFont {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+}
+
+.dashTitle {
+  background-color: burlywood;
+  opacity: 0.8;
+}
+
 .auth-bg {
   position: absolute;
   left: 150px;
