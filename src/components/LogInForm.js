@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { logIn } from '../utilities/users-service';
 
 export default function LogInForm (props) {
@@ -7,6 +8,8 @@ export default function LogInForm (props) {
     email: '',
     password: ''
   })
+
+  const navi = useNavigate();
 
   const [errorState, setErrorState] = useState('')
 
@@ -51,7 +54,7 @@ export default function LogInForm (props) {
             onChange={handleChange}
             required
           />
-          <button type="submit">Log In</button>
+          <button onClick={ () => navi('/home')} type="submit">Log In</button>
         </form>
         <p className="error-message">{errorState}</p>
       </div>

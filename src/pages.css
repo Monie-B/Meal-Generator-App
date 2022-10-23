@@ -1,6 +1,6 @@
 /* Dashboard */
 
-.dashTitle {
+.title {
     background-color: burlywood;
     opacity: 0.8;
 }
@@ -8,3 +8,54 @@
 .container {
     background-color: darkgreen;
 }
+
+.navStyle {
+    background-color: burlywood;
+    opacity: 0.8;
+}
+
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #287920;
+    opacity: 0.9;
+    padding: 10px;
+    width: min-content;
+    align-content: center;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .porkchops {
+    width: 200px;
+    height: 200px;
+  }
+
+  .spaghetti {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tacos {
+    width: 200px;
+    height: 200px;
+  }
+
+  .teriyaki {
+    width: 200px;
+    height: 200px;
+  }

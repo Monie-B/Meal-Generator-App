@@ -52,11 +52,6 @@
   background-color: bisque;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navButton {
+  padding: 2px;
 }
